@@ -1,0 +1,47 @@
+<resources>
+
+  <!--App-->
+  <!--Downtime-->
+  <string name="app_name">AndroidBoilerplate</string>
+  <!--Settings-->
+  <string name="action_settings">Settings</string>
+
+  <!--Activity Landing-->
+  <!--Email-->
+  <string name="activity_landing_hint_email">Email</string>
+  <!--Password-->
+  <string name="activity_landing_hint_password">Password</string>
+  <!--LOGIN-->
+  <string name="activity_landing_button_login">LOGIN</string>
+  <!--No account? Go to signup-->
+  <string name="activity_landing_text_signup">No account? Go to signup</string>
+  <!--Email is required-->
+  <string name="activity_landing_email_required">Email is required</string>
+  <!--Password is required-->
+  <string name="activity_landing_password_required">Password is required</string>
+
+  <!--Activity Register-->
+  <!--Email-->
+  <string name="activity_register_hint_email">Email</string>
+  <!--Password-->
+  <string name="activity_register_hint_password">Password</string>
+  <!--SIGNUP-->
+  <string name="activity_register_button_signup">SIGNUP</string>
+  <!--APPLY-->
+  <string name="activity_register_button_apply">APPLY</string>
+  <!--Already have an account? Go to login-->
+  <string name="activity_register_text_login">Already have an account? Go to login</string>
+  <!--Username-->
+  <string name="activity_register_hint_username">Username</string>
+  <!--Username is required-->
+  <string name="activity_register_username_required">Username is required</string>
+  <!--Email is required-->
+  <string name="activity_register_email_required">Email is required</string>
+  <!--Password is required-->
+  <string name="activity_register_password_required">Password is required</string>
+
+  <!--Activity Main-->
+  <!--LOGOUT-->
+  <string name="activity_main_button_logout">LOGOUT</string>
+
+</resources>

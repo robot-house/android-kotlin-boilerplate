@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <color name="colorAccent">#209ee6</color>
+
+  <color name="lightTeal">#8cf5fc</color>
+  <color name="teal">#56c2c9</color>
+  <color name="darkTeal">#0d9198</color>
+
+  <color name="blue">#0000ff</color>
+
+  <color name="white">#FFFFFF</color>
+  <color name="ash">#F7F7F7</color>
+  <color name="gainsboro">#DCDCDC</color>
+  <color name="silver">#C0C0C0</color>
+  <color name="lightGrey">#A9A9A9</color>
+  <color name="grey">#808080</color>
+  <color name="darkGrey">#696969</color>
+  <color name="darkerGrey">#4A4A4A</color>
+  <color name="black">#000000</color>
+
+</resources>

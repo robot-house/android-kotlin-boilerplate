@@ -30,10 +30,7 @@ class AuthManagerImpl : AuthManager {
     return Maybe.create<AuthResult> { emitter ->
       RxHandler.assignOnTask(
         emitter,
-        firebaseAuth.createUserWithEmailAndPassword(
-          email,
-          password
-        )
+        firebaseAuth.createUserWithEmailAndPassword(email, password)
       )
     }
       .map {
@@ -45,9 +42,7 @@ class AuthManagerImpl : AuthManager {
       .observeOn(AndroidSchedulers.mainThread())
   }
 
-  override fun isLoggedIn(): Boolean {
-    return !firebaseAuth.currentUser?.uid.isNullOrEmpty()
-  }
+  override fun isLoggedIn(): Boolean = !firebaseAuth.currentUser?.uid.isNullOrEmpty()
 
   override fun signOut() {
     firebaseAuth.signOut()

@@ -7,6 +7,7 @@ import io.robothouse.androidboilerplate.R
 import io.robothouse.androidboilerplate.feature.BaseActivity
 
 class RegisterActivity : BaseActivity() {
+
   companion object {
     fun getIntent(context: Context) = Intent(context, RegisterActivity::class.java)
   }

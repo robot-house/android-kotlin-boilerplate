@@ -7,7 +7,7 @@ import com.google.android.gms.tasks.Task
 
 import io.reactivex.MaybeEmitter
 
-class RxHandler<T> private constructor(
+class RxMaybeHandler<T> private constructor(
   private val emitter: MaybeEmitter<in T>
 ) : OnSuccessListener<T>, OnFailureListener, OnCompleteListener<T> {
 
@@ -30,7 +30,7 @@ class RxHandler<T> private constructor(
 
   companion object {
     fun <T> assignOnTask(emitter: MaybeEmitter<in T>, task: Task<T>) {
-      val handler = RxHandler(emitter)
+      val handler = RxMaybeHandler(emitter)
       task.addOnSuccessListener(handler)
       task.addOnFailureListener(handler)
       try {

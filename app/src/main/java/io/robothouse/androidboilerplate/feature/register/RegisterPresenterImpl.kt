@@ -7,9 +7,7 @@ class RegisterPresenterImpl(
 ) : BasePresenter(), RegisterPresenter {
 
   override fun onResume() {
-    if (authManager.isLoggedIn()) {
-      screen.startMainActivity()
-    }
+    if (authManager.isLoggedIn()) screen.startMainActivity()
   }
 
   override fun onRegisterClick(username: String, email: String, password: String) {

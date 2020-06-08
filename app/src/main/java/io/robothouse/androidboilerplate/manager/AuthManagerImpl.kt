@@ -8,7 +8,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import io.robothouse.androidboilerplate.constants.DATA_USERS
 import io.robothouse.androidboilerplate.model.User
-import io.robothouse.androidboilerplate.handler.RxHandler
+import io.robothouse.androidboilerplate.handler.RxMaybeHandler
 
 class AuthManagerImpl : AuthManager {
 
@@ -17,7 +17,7 @@ class AuthManagerImpl : AuthManager {
 
   override fun login(email: String, password: String): Maybe<AuthResult> {
     return Maybe.create<AuthResult> { emitter ->
-      RxHandler.assignOnTask(
+      RxMaybeHandler.assignOnTask(
         emitter,
         firebaseAuth.signInWithEmailAndPassword(email, password)
       )
@@ -28,7 +28,7 @@ class AuthManagerImpl : AuthManager {
 
   override fun register(username: String, email: String, password: String): Maybe<AuthResult> {
     return Maybe.create<AuthResult> { emitter ->
-      RxHandler.assignOnTask(
+      RxMaybeHandler.assignOnTask(
         emitter,
         firebaseAuth.createUserWithEmailAndPassword(email, password)
       )

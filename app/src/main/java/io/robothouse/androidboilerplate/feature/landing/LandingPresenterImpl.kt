@@ -7,9 +7,7 @@ class LandingPresenterImpl(
 ) : LandingPresenter, BasePresenter() {
 
   override fun onResume() {
-    if (authManager.isLoggedIn()) {
-      screen.startMainActivity()
-    }
+    if (authManager.isLoggedIn()) screen.startMainActivity()
   }
 
   override fun onLoginClick(email: String, password: String) {

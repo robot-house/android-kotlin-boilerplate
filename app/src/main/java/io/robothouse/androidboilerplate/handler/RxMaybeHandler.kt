@@ -12,11 +12,8 @@ class RxMaybeHandler<T> private constructor(
 ) : OnSuccessListener<T>, OnFailureListener, OnCompleteListener<T> {
 
   override fun onSuccess(res: T?) {
-    if (res != null) {
-      emitter.onSuccess(res)
-    } else {
-      emitter.onError(RxFirebaseNullDataException("Observables can't emit null values"))
-    }
+    res?.let { emitter.onSuccess(res) }
+      ?: emitter.onError(RxFirebaseNullDataException("Observables can't emit null values"))
   }
 
   override fun onComplete(task: Task<T>) {
@@ -47,7 +44,7 @@ class RxMaybeHandler<T> private constructor(
 
     constructor(detailMessage: String) : super(detailMessage)
 
-    constructor(resultException: Exception?) : super(if (resultException != null) resultException.message else DEFAULT_MESSAGE)
+    constructor(resultException: Exception?) : super(resultException?.message ?: DEFAULT_MESSAGE)
 
     companion object {
       private const val DEFAULT_MESSAGE = "Task result was successful but data was empty"
